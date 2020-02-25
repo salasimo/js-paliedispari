@@ -80,7 +80,7 @@ if (blocco == false) {
 }
 
 function giocaPariDispari(schieramento, numeroScelto) {
-    numeroEstratto = Math.floor(Math.random() * (100 - 1)) + 1;
+    numeroEstratto = Math.floor(Math.random() * 100) + 1;
     sommaTotale = numeroScelto + numeroEstratto;
     if (sommaTotale % 2 == 0) {
         var check = "pari";
