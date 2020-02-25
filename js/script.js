@@ -23,6 +23,7 @@ function isPalindrome(param) {
     for (var i = 0; i < (array.length / 2); i++) {
         if (array[i] != array[(array.length - 1) - i]) {
             check = false;
+            break;
         }
     }
     if (check == false) {
