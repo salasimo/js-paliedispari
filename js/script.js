@@ -1,15 +1,13 @@
 /* 1. acquisisco stringa
    2. passo ogni lettera della parola in array
-   3. verfico se le lettere sono pari o dispari
-    caso pari  4a.se sono pari verifico che prima == ultima, seconda == penultima...
-    caso dispari  4b.se sono dispari faccio la verifica per la prima metà della parola - 1 lettera
+   3. verifico se le coppie (0,n-0), (1,n-1), (2, n-2)... sono uguali o no
 */
 var parola = prompt("Inserisci una parola (o una frase) e scopri se è palindroma").toLowerCase();
 var risposta = isPalindrome(parola);
 if (risposta) {
-    console.log("Questa parola è palindroma!")
+    console.log("Questa parola è palindroma!");
 } else {
-    console.log("Non è palindroma.")
+    console.log("Non è palindroma.");
 }
 
 
@@ -18,7 +16,7 @@ function isPalindrome(param) {
     var array = param.split("");
     for (var i = 0; i < array.length; i++) { //elimino gli spazi per rendere palindrome anche frasi come "i topi non avevano nipoti"
         if (array[i] == " ") {
-            array.splice(i, 1)
+            array.splice(i, 1);
         }
     }
     var check = true;
@@ -94,10 +92,6 @@ function giocaPariDispari(schieramento, numeroScelto) {
         return false; //LOSE
     }
 }
-
-
-
-
 
 
 
